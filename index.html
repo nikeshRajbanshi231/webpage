@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+    <!-- Home section starts -->
+    <section class="header">
+        <nav>
+
+            <a href="#"><img src="logo.png" alt="school-logo" class="logo"></a>
+
+            <div class="nav_links" id="click">
+                <i class="fa-solid fa-xmark" onclick="hidemenu()"></i>
+
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showmenu()"></i>
+        </nav>
+        <div class="textbox">
+            <h1>Welcome futureTechX</h1>
+            <p>A complete E-learning Platform</p><br><br>
+           <a href="#" class="btn">Register Here!</a> 
+        </div>
+    </section>
+    <!-- Home section ends -->
+
+     <!-- Courses Section Starts -->
+     <section class="courses">
+        <h1>Courses we <span>Offer</span></h1>
+        <p id="p1">We provide outstanding courses across the globe.</p>
+        <div class="row">
+            <div class="col">
+                <h3>Intermediate</h3><br>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                   Quo reprehenderit minus expedita dignissimos quia, omnis
+                   nemo facere itaque officiis perferendis maiores eos aliquam 
+                   iusto ad alias amet, libero quae nihil.
+                </p>
+            </div>
+            <div class="col">
+                <h3>Post Graduate</h3><br>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                   Quo reprehenderit minus expedita dignissimos quia, omnis
+                   nemo facere itaque officiis perferendis maiores eos aliquam 
+                   iusto ad alias amet, libero quae nihil.
+                </p>
+            </div>
+            <div class="col">
+                <h3>P.H.D</h3><br>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                   Quo reprehenderit minus expedita dignissimos quia, omnis
+                   nemo facere itaque officiis perferendis maiores eos aliquam 
+                   iusto ad alias amet, libero quae nihil.
+                </p>
+            </div>
+        </div>
+     </section>
+
+
+     <!-- Courses section ends -->
+
+     <!-- Footer section starts -->
+      <section class="footer">
+        <div class="container">
+            <div class="left box">
+                <h2>About us</h2>
+                <div class="content">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                         Quia ullam ratione eum facere, quis mollitia consectetur 
+                         porro hic incidunt. Cumque esse animi obcaecati facere rerum 
+                         libero quisquam velit laborum recusandae.
+                        </p>
+                    <div class="social-media">
+                        <a href="#"><i class='bx bxl-facebook' ></i></a>
+                        <a href="#"><i class='bx bxl-twitter' ></i></a>
+                        <a href="#"><i class='bx bxl-instagram' ></i></a>
+                        <a href="#"><i class='bx bxl-youtube' ></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="center box">
+                <h2>Address</h2>
+                <div class="content">
+                    <div class="place">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span class="text">Biratnagar,Nepal</span>
+                    </div>
+                    <div class="phone">
+                        <i class="fa-solid fa-phone"></i>
+                        <span class="text">+089-765418002</span>
+                    </div>
+                    <div class="email">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span class="text">abc@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="right box">
+                <h2>contact us</h2>
+                <div class="content">
+                    <form action="#">
+                        <div class="email">
+                            <div class="text">Email*</div>
+                            <input type="email" required>
+                        </div>
+                        <div class="msg">
+                            <div class="text">Message*</div>
+                            <textarea rows="2" cols="25" required></textarea>
+                        </div>
+                        <div class="btn">
+                            <button type="submit">send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+      </section>
+      <!-- Footer section ends -->
+
+
+
+    <script>
+        let navlink=document.getElementById("click");
+        function hidemenu(){
+            navlink.style.right="-200px";
+        }
+        function showmenu(){
+            navlink.style.right="0";
+        }
+    </script>
+</body>
+
+</html>

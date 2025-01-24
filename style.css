@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    min-height: 100vh;
+    /* Ensures the body is always at least the height of the viewport */
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(school\ image.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 10px;
+    position: sticky;
+    top: 0;
+
+}
+
+nav .logo {
+    width: 80px;
+    /* height:200px;  */
+}
+
+nav .nav_links ul {
+    display: flex;
+    list-style: none;
+    padding: 10px;
+}
+
+.nav_links ul li {
+    margin-right: 10px;
+    padding: 8px 12px;
+
+}
+
+.nav_links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+
+}
+
+.nav_links ul li::after {
+    content: '';
+    height: 2px;
+    width: 0%;
+    background-color: red;
+    display: block;
+    margin: auto;
+    transition: 0.2s;
+
+}
+
+.nav_links ul li:hover::after {
+    width: 100%;
+}
+
+.header .textbox {
+    /* width:80%; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.textbox h1 {
+    font-size: 40px;
+}
+
+.textbox p {
+    font-size: 15px;
+}
+
+.textbox .btn {
+    color: #fff;
+    text-decoration: none;
+    background: transparent;
+    border: 2px solid white;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.3);
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.textbox .btn:hover {
+    background-color: red;
+}
+
+nav .fa-solid {
+    display: none;
+}
+
+@media(max-width:700px) {
+    .textbox h1 {
+        font-size: 20px;
+    }
+
+    .textbox p {
+        font-size: 10px;
+    }
+
+    .textbox .btn {
+        padding: 7px 5px;
+    }
+
+    .nav_links {
+        position: fixed;
+        top: 0;
+        right: -200px;
+        height: 100vh;
+        width: 200px;
+        backdrop-filter: blur(10px);
+        background:#000;
+        z-index: 99;
+        transition: all 0.3s linear;
+    }
+
+    .nav_links ul {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+
+
+    }
+
+    .nav_links ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 100%;
+
+    }
+
+    .nav_links ul li a {
+        width: 100%;
+    }
+
+    nav .fa-solid {
+        display: block;
+        font-size: 20px;
+        color: white;
+        opacity: 0.5;
+        cursor: pointer;
+        padding: 0 9px;
+    }
+
+}
+
+/* courses section */
+.courses h1 {
+    margin-top: 3%;
+    text-align: center;
+
+}
+
+.courses h1 span {
+    color: aqua;
+}
+
+.courses #p1 {
+    color: #999999;
+    text-align: center;
+}
+
+.row {
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.col {
+    margin: 3%;
+    padding: 3%;
+    background-color: #f5f5f5;
+    flex-basis: 31%;
+    border-radius:10px;
+    border: 0.1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s linear;
+    text-align: center;
+}
+.col p{
+    text-align:justify;
+}
+@media(max-width:700px){
+    .row{
+        flex-direction:column;
+
+    }
+   
+}
+
+.col:hover {
+    background-color: #eaeaea;
+    color: #333333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+
+}
+
+
+/* footer section */
+.footer {
+    margin-top: auto;
+    background-color: #000;
+    color: #fff;
+    padding: 20px 10px;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.footer .box {
+    flex: 1;
+    padding: 10px;
+    text-align: left;
+    max-width: 300px;
+}
+
+.footer .box p {
+    text-align: justify;
+    word-wrap: break-word;
+}
+
+.footer .box input,
+.footer .box textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.left .content .social-media{
+    margin:20px 0 0 0;
+}
+.left .content .social-media a{
+    padding:0 2px;
+}
+.left .content .social-media a i{
+    color:#fff;
+    font-size: 18px;
+ 
+}
+.left .content .social-media a i:hover{
+    transform: scale(1.1);
+}
+.container .center .content ,.place,.phone,.email{
+    margin-bottom:2px;
+}
+@media (max-width: 700px) {
+    .footer .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .footer .box {
+        max-width: 90%;
+        text-align: center;
+    }
+}
